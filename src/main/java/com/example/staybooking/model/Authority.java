@@ -1,8 +1,12 @@
 package com.example.staybooking.model;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Entity
+@Table(name = "authority")
 public class Authority implements Serializable {
     private static final long serialVersionUID = 1l;
 
