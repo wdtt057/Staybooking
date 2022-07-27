@@ -11,4 +11,8 @@ public class CustomExceptionHandler {
     public final ResponseEntity<String> handleUserAlreadyExistException(Exception e, WebRequest request) {
         return new ResponseEntity<>(e.getMessage(), HttpStatus.CONFLICT);
     }
+
+    public final ResponseEntity<String> handlerUserNotExistException(Exception e, WebRequest request) {
+        return new ResponseEntity<>(e.getMessage(),HttpStatus.UNAUTHORIZED);
+    }
 }
