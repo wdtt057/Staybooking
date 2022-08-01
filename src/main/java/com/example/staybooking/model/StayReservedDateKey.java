@@ -6,15 +6,15 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 @Embeddable
-public class StayReserveDateKey implements Serializable {
+public class StayReservedDateKey implements Serializable {
     private static final long serialVersionUID = 1L;
     private Long stay_id;
     private LocalDate date;
 
-    public StayReserveDateKey() {
+    public StayReservedDateKey() {
     }
 
-    public StayReserveDateKey(Long stay_id, LocalDate date) {
+    public StayReservedDateKey(Long stay_id, LocalDate date) {
         this.stay_id = stay_id;
         this.date = date;
     }
@@ -23,7 +23,7 @@ public class StayReserveDateKey implements Serializable {
         return stay_id;
     }
 
-    public StayReserveDateKey setStay_id(Long stay_id) {
+    public StayReservedDateKey setStay_id(Long stay_id) {
         this.stay_id = stay_id;
         return this;
     }
@@ -32,7 +32,7 @@ public class StayReserveDateKey implements Serializable {
         return date;
     }
 
-    public StayReserveDateKey setDate(LocalDate date) {
+    public StayReservedDateKey setDate(LocalDate date) {
         this.date = date;
         return this;
     }
@@ -40,9 +40,9 @@ public class StayReserveDateKey implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || o.getClass() != getClass()) return false;
-        StayReserveDateKey currDate = (StayReserveDateKey) o;
-        return stay_id.equals(currDate.stay_id) && date.equals(currDate.date);
+        if (o == null || getClass() != o.getClass()) return false;
+        StayReservedDateKey that = (StayReservedDateKey) o;
+        return stay_id.equals(that.stay_id) && date.equals(that.date);
     }
 
     @Override

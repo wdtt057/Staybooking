@@ -24,7 +24,7 @@ public class StayService {
         return stayRepository.findByHost(new User.Builder().setUsername(username).build());
     }
 
-    public Stay findByIdAndUser(Long stayId, String username) throws StayNotExistException {
+    public Stay findByIdAndHost(Long stayId, String username) throws StayNotExistException {
         Stay stay = stayRepository.findByIdAndHost(stayId, new User.Builder().setUsername(username).build());
         if (stay == null) {
             throw new StayNotExistException("Stay doesn't exist");
