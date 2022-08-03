@@ -27,12 +27,12 @@ public class Stay implements Serializable {
     }
 
     public Stay(Builder builder) {
-        this.id = getId();
-        this.name = getName();
-        this.description = getDescription();
-        this.address = getAddress();
-        this.guestNumber = getGuestNumber();
-        this.host = getHost();
+        this.id = builder.id;
+        this.name = builder.name;
+        this.description = builder.description;
+        this.address = builder.address;
+        this.guestNumber = builder.guestNumber;
+        this.host = builder.host;
     }
 
     public Long getId() {

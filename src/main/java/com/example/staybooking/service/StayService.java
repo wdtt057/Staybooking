@@ -37,7 +37,7 @@ public class StayService {
     }
 
     @Transactional(isolation = Isolation.SERIALIZABLE)
-    public void delete(Long stayId, String username) throws StayNotExistException{
+    public void delete(Long stayId, String username) throws StayNotExistException {
         Stay stay = stayRepository.findByIdAndHost(stayId, new User.Builder().setUsername(username).build());
         if (stay == null) {
             throw new StayNotExistException("Stay doesn't exist");
